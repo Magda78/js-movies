@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
+    <div class='backdrop' id='backdrop'></div>
+    <div class='page-container'>
         <nav class='nav-bar'>
             <button id='add-btn'>Add Movie</button>
         </nav>
@@ -15,16 +16,20 @@
             <ul id='list'></ul>
         </div>
     </div>
-    
     <div class='open-window' id='open-window'>
-        <form id='window-form'>
-            <label for='title'>Title</label>
-            <input id='title'></input>
-            <label for='cover'>Cover</label>
-            <input id='cover'></input>
-            <button id='form-add-btn'>Add</button>
-            <button id='from-cancel-btn'>Cancel</button>
-        </form>
+        <div class='top-form'></div>
+        <div class='form-container'>
+            <form id='window-form'>
+                <label for='title'>Title:</label>
+                <input id='title'></input>
+                <label for='cover'>Cover:</label>
+                <input id='cover'></input>
+                <div class='form-btn'>
+                    <button id='form-add-btn'>Add</button>
+                    <button id='form-cancel-btn'>Cancel</button>
+                </div>
+            </form>
+        </div>
     </div>
     <script src='movies.js'></script>
 </body>

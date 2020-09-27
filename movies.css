@@ -3,11 +3,31 @@
 * {
 	box-sizing: border-box;
 	font-family: 'Roboto Condensed', sans-serif;
+	background: #ccc6bc;
+}
+
+#backdrop {
+	display: none;
+}
+
+#backdrop.visible {
+	display: block;
+	background: rgba(0, 0, 0, 0.20);
+	width: 100%;
+	height: 100vh;
+	z-index: 10;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+}
+
+.page-container {
+	z-index: 10;
 }
 
 .nav-bar {
 	width: 100%;
-	height: 257px;
+	height: 25vh;
 	background: url('./img/nav.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -18,27 +38,101 @@
 }
 
 #add-btn {
-	width: 273px;
-	height: 59px;
-	background: rgba(140, 131, 126, 0.64);
-	color: #020305;
-	font-size: 36px;
+	width: 200px;
+	height: 40px;
+	background: #babab4;
+	color: #000000;
+	font-size: 24px;
 	letter-spacing: 8%;
 	margin-right: 30px;
-	border-radius: 5px;
 	outline: none;
 	border: none;
 	text-transform: uppercase;
 }
 
 #add-btn:hover {
-	background: rgba(140, 131, 126, 0.90);
+	background: rgba(186, 186, 180, 0.69);
+	color: #ffffff;
 }
 
 .open-window {
 	display: none;
+	width: 30%;
+	position: fixed;
+	background: #000000;
 }
 
 .open-window.visible {
 	display: block;
+	position: absolute;
+	top: 20vh;
+	left: 35%;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.64);
+}
+
+#window-form {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 10px;
+	background: #000000;
+}
+
+.top-form {
+	width: 100%;
+	height: 50px;
+	background: rgba(186, 186, 180, 0.69);
+}
+
+label {
+	font-size: 20px;
+	text-transform: capitalize;
+	background: #000000;
+	color: #ffffff;
+	margin-top: 11px;
+}
+
+input {
+	margin-top: 11px;
+	height: 20px;
+	border: none;
+	background: #000000;
+	border-bottom: 1px solid #ccc6bc;
+	outline: none;
+}
+
+.form-btn {
+	display: flex;
+	margin-top: 11px;
+	justify-content: flex-end;
+	margin-bottom: 20px;
+	margin-top: 30px;
+	background: #000000;
+}
+
+#form-add-btn {
+	margin-right: 5px;
+	width: 80px;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+#form-add-btn:hover {
+	background: rgba(186, 186, 180, 0.69);
+	color: #ffffff;
+}
+
+#form-cancel-btn {
+	margin-right: 5px;
+	width: 80px;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	text-transform: capitalize;
+}
+
+#form-cancel-btn:hover {
+	background: rgba(186, 186, 180, 0.69);
+	color: #ffffff;
 }

@@ -5,11 +5,17 @@ const cancelMovieBtn = document.getElementById('from-cancel-btn');
 const inputTitle = document.getElementById('title');
 const inputCover = document.getElementById('cover');
 const movieList = document.getElementById('list');
+const backdrop = document.getElementById('backdrop');
 
 let movies = [];
 
+const backdropControl = () => {
+	backdrop.classList.add('visible');
+};
+
 addBtnHandler = () => {
 	openWidow.classList.toggle('visible');
+	backdropControl();
 	console.log('click');
 };
 
@@ -50,4 +56,4 @@ const movieListHandler = () => {
 
 addBtn.addEventListener('click', addBtnHandler);
 addMovieBtn.addEventListener('click', addMovieHandler);
-cancelMovieBtn.addEventListener('click', cancelBtnHandler);
+//cancelMovieBtn.addEventListener('click', cancelBtnHandler);
